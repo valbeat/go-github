@@ -75,7 +75,7 @@ func (s *RepositoriesService) CreateFork(ctx context.Context, owner, repo string
 		return nil, nil, err
 	}
 
-	req, err := s.client.NewRequest("POST", u, nil)
+	req, err := s.client.NewRequest("POST", u, opts)
 	if err != nil {
 		return nil, nil, err
 	}
